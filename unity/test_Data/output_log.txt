@@ -17,7 +17,7 @@ Platform assembly: C:\cygwin64\home\Brian\repos\squirrel-simulator\unity\test_Da
 Loading C:\cygwin64\home\Brian\repos\squirrel-simulator\unity\test_Data\Managed\Assembly-UnityScript-firstpass.dll into Unity Child Domain
 Platform assembly: C:\cygwin64\home\Brian\repos\squirrel-simulator\unity\test_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
 Loading C:\cygwin64\home\Brian\repos\squirrel-simulator\unity\test_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
-- Completed reload, in  0.045 seconds
+- Completed reload, in  0.052 seconds
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
