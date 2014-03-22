@@ -13,12 +13,19 @@ public class SplashController : MonoBehaviour {
 	void Start () {
 		splashView.texture = splashTitle;
 		Invoke("nextScene", 8);
+		startGame.text = "";
+		quitGame.text = "";
 	}
 
 	void nextScene () {
 		splashView.texture = splashStartGame;
 		startGame.text = "Start the Game";
 		quitGame.text = "Quit Game";
+
+		if (startGame.HitTest(Input.mousePosition) && Input.GetMouseButtonDown(0))
+		{
+			Application.LoadLevel("main");
+		}
 	}
 	// Update is called once per frame
 	void Update () {
