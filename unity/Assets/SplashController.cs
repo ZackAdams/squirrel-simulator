@@ -22,13 +22,12 @@ public class SplashController : MonoBehaviour {
 		startGame.text = "Start the Game";
 		quitGame.text = "Quit Game";
 
-		if (startGame.HitTest(Input.mousePosition) && Input.GetMouseButtonDown(0))
+	}
+	private void OnGUI()
+	{
+		if(GUI.Button(new Rect(0, 0, 200, 50), "" + startGame.text))
 		{
 			Application.LoadLevel("main");
 		}
-	}
-	// Update is called once per frame
-	void Update () {
-	
 	}
 }
