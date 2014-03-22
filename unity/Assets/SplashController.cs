@@ -8,6 +8,7 @@ public class SplashController : MonoBehaviour {
 	public Texture2D splashStartGame;
 	public Texture startGame;
 	public Texture quitGame;
+	private bool hideGui = false;
 
 	// Use this for initialization
 	void Start () {
@@ -16,6 +17,7 @@ public class SplashController : MonoBehaviour {
 	}
 
 	void nextScene () {
+		hideGui = true;
 		splashView.texture = splashStartGame;
 	}
 
@@ -24,13 +26,15 @@ public class SplashController : MonoBehaviour {
 		Color c = GUI.backgroundColor;
 		GUI.backgroundColor = Color.clear;
 
-		if(GUI.Button(new Rect(300, 230, 150, 40), startGame))
-		{
-			Application.LoadLevel ("main");
-		}
-		if(GUI.Button(new Rect(300, 280, 150, 40), quitGame))
-		{
-			Application.Quit();
+		if (hideGui) {
+			if(GUI.Button(new Rect(300, 230, 150, 40), startGame))
+			{
+				Application.LoadLevel ("main");
+			}
+			if(GUI.Button(new Rect(300, 280, 150, 40), quitGame))
+			{
+				Application.Quit();
+			}
 		}
 	}
 }
