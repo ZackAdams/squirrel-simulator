@@ -27,7 +27,7 @@ public class SplashController : MonoBehaviour {
 	{
 		if(GUI.Button(new Rect(0, 0, 200, 50), "" + startGame.text))
 		{
-			Application.LoadLevel("main");
+			Application.LoadLevel ("main");
 		}
 	}
 }
