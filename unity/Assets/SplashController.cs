@@ -6,28 +6,31 @@ public class SplashController : MonoBehaviour {
 	public GUITexture splashView;
 	public Texture2D splashTitle;
 	public Texture2D splashStartGame;
-	public GUIText startGame;
-	public GUIText quitGame;
+	public Texture startGame;
+	public Texture quitGame;
 
 	// Use this for initialization
 	void Start () {
 		splashView.texture = splashTitle;
-		Invoke("nextScene", 8);
-		startGame.text = "";
-		quitGame.text = "";
+		Invoke("nextScene", 5);
 	}
 
 	void nextScene () {
 		splashView.texture = splashStartGame;
-		startGame.text = "Start the Game";
-		quitGame.text = "Quit Game";
-
 	}
+
 	private void OnGUI()
 	{
-		if(GUI.Button(new Rect(0, 0, 200, 50), "" + startGame.text))
+		Color c = GUI.backgroundColor;
+		GUI.backgroundColor = Color.clear;
+
+		if(GUI.Button(new Rect(300, 230, 150, 40), startGame))
 		{
 			Application.LoadLevel ("main");
+		}
+		if(GUI.Button(new Rect(300, 280, 150, 40), quitGame))
+		{
+			Application.Quit();
 		}
 	}
 }
