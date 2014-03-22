@@ -70,6 +70,19 @@ ModelImporter:
     4300020: House_B_Roof
     4300022: House_B_FloorTop
     4300024: House_B_FloorBottom
+    6400000: House_B_AddonBottom
+    6400002: House_B_AddonTop
+    6400004: House_B_Door
+    6400006: House_B_FloorBottom
+    6400008: House_B_FloorTop
+    6400010: House_B_Roof
+    6400012: House_B_RoofAddon
+    6400014: House_B_WindowAddonTop
+    6400016: House_B_WindowBottomB
+    6400018: House_B_WindowBottomL
+    6400020: House_B_WindowDoor
+    6400022: House_B_WindowTopB_A
+    6400024: House_B_WindowTopB_B
     11100000: //RootNode
   materials:
     importMaterials: 1
@@ -91,7 +104,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0

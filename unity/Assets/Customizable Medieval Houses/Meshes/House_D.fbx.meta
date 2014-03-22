@@ -50,6 +50,15 @@ ModelImporter:
     4300012: House_D_RoofLeft
     4300014: House_D_RoofRight
     4300016: House_D_FloorRight
+    6400000: House_D_Door
+    6400002: House_D_FloorLeft
+    6400004: House_D_FloorRight
+    6400006: House_D_RoofLeft
+    6400008: House_D_RoofRight
+    6400010: House_D_WindowLeft
+    6400012: House_D_WindowTopB
+    6400014: House_D_WindowTopF
+    6400016: House_D_WindowTopL
     11100000: //RootNode
   materials:
     importMaterials: 1
@@ -71,7 +80,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0

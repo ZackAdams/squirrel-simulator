@@ -55,6 +55,16 @@ ModelImporter:
     4300014: House_C_FloorTop
     4300016: House_C_Roof
     4300018: House_C_Chimney
+    6400000: House_C_Chimney
+    6400002: House_C_Door
+    6400004: House_C_FloorBottom
+    6400006: House_C_FloorTop
+    6400008: House_C_Roof
+    6400010: House_C_WindowBottom_A
+    6400012: House_C_WindowBottom_B
+    6400014: House_C_WindowDoor
+    6400016: House_C_WindowTop_A
+    6400018: House_C_WindowTop_B
     11100000: //RootNode
   materials:
     importMaterials: 1
@@ -76,7 +86,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
