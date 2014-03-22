@@ -27,6 +27,7 @@ public class SplashController : MonoBehaviour {
 		GUI.backgroundColor = Color.clear;
 
 		if (hideGui) {
+
 			if(GUI.Button(new Rect(300, 230, 150, 40), startGame))
 			{
 				Application.LoadLevel ("main");
