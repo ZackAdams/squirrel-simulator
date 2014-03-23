@@ -690,6 +690,10 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 078103333b3f850438e89328b3dfa7db, type: 2}
+      propertyPath: m_MaterialTemplate
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 078103333b3f850438e89328b3dfa7db, type: 2}
   m_RootGameObject: {fileID: 1099404240}
@@ -1593,7 +1597,11 @@ MonoBehaviour:
   hunger: {fileID: 1420968591}
   displayTimer: {fileID: 1500767410}
   player: {fileID: 905133360}
-  collectTimer: 0
+  fallTimelimit: 60
+  winterTimelimit: 60
+  currentTime: 0
+  terrain: {fileID: 1099404242}
+  winterMaterial: {fileID: 2100000, guid: fffdf870b2c00fc43ba4ea921d0c010d, type: 2}
 --- !u!1 &1196674387
 GameObject:
   m_ObjectHideFlags: 0
