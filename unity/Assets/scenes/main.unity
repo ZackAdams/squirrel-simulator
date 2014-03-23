@@ -389,15 +389,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400002, guid: da74ba8aefb8cdd4195a76cfe98a5e20, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 38.5514832
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: da74ba8aefb8cdd4195a76cfe98a5e20, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 50
+      value: .899999976
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: da74ba8aefb8cdd4195a76cfe98a5e20, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 166
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: da74ba8aefb8cdd4195a76cfe98a5e20, type: 2}
       propertyPath: m_LocalRotation.x
@@ -999,7 +999,7 @@ Transform:
   m_PrefabInternal: {fileID: 221810023}
   m_GameObject: {fileID: 835533627}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 38.5514832, y: 50, z: 166}
+  m_LocalPosition: {x: 0, y: .899999976, z: 0}
   m_LocalScale: {x: .400000006, y: .5, z: .400000006}
   m_Children: []
   m_Father: {fileID: 905133354}
@@ -1161,6 +1161,7 @@ GameObject:
   - 114: {fileID: 835533629}
   - 114: {fileID: 905133360}
   - 114: {fileID: 905133361}
+  - 114: {fileID: 905133362}
   m_Layer: 0
   m_Name: First Person Controller
   m_TagString: Untagged
@@ -1281,6 +1282,81 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45ca7ec639914cc4a8ed1287d5698a05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &905133362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 905133353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d0e75e72e5c0ba479fc8e096f014693, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  testSeed: 0
+  message: 
+  playername: Squirelly
+  testing: 10
+  menuStyle:
+    m_Name: 
+    m_Normal:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Hover:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Active:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Focused:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnNormal:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnHover:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnActive:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnFocused:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Border:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Margin:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Padding:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Overflow:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Font: {fileID: 0}
+    m_FontSize: 0
+    m_FontStyle: 0
+    m_Alignment: 0
+    m_WordWrap: 0
+    m_RichText: 1
+    m_TextClipping: 0
+    m_ImagePosition: 0
+    m_ContentOffset: {x: 0, y: 0}
+    m_FixedWidth: 0
+    m_FixedHeight: 0
+    m_StretchWidth: 1
+    m_StretchHeight: 0
+  menuButton: {fileID: 2800000, guid: 0dfeca94b3de0cf47862dc172e8aaff2, type: 3}
 --- !u!1 &938888558
 GameObject:
   m_ObjectHideFlags: 0
@@ -1590,7 +1666,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294967279
   m_Lightmapping: 1
   m_ShadowSamples: 1
   m_ShadowRadius: 0
