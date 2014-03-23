@@ -15,6 +15,7 @@ public class HudDisplay : MonoBehaviour {
 	private float currentTimelimit;
 	public Terrain terrain;
 	public Material winterMaterial;
+	public NutController nutController;
 	private bool isWinter = false;
 	private Vector3 spawnPosition;
 	private Quaternion spawnRotation;
@@ -32,9 +33,11 @@ public class HudDisplay : MonoBehaviour {
 			hungerSetText ();
 		}
 		currentTimelimit = fallTimelimit;
+		resetTimer ();
+	}
+
+	void resetTimer() {
 		currentTime = currentTimelimit;
-		spawnPosition = player.transform.position;
-		spawnRotation = player.transform.rotation;
 	}
 	
 	// Update is called once per frame
@@ -50,8 +53,10 @@ public class HudDisplay : MonoBehaviour {
 			if (isWinter) {
 				endGame();
 			} else {
+				nutController.destroyNuts();
+				resetTimer();
+				player.reSpawn();
 				switchToWinter();
-				respawn();
 			}
 		}
 
@@ -83,12 +88,6 @@ public class HudDisplay : MonoBehaviour {
 		terrain.detailObjectDistance = 0;
 		//Turn off shadows, helps snow look better
 		terrain.castShadows = false;
-	}
-
-	void respawn() {
-		currentTime = currentTimelimit;
-		player.transform.position = spawnPosition;
-		player.transform.rotation = spawnRotation;
 	}
 
 }

@@ -8,8 +8,15 @@ public class CharacterStats : MonoBehaviour {
 	public float maxHealth = 100;
 	public float health = 100;
 	private int buriedCount = 0;
+	private Vector3 spawnPosition;
+	private Quaternion spawnRotation;
 
-	void OnTriggerEnter(Collider other) {
+	public void Start() {
+		spawnPosition = transform.position;
+		spawnRotation = transform.rotation;
+	}
+
+	public void OnTriggerEnter(Collider other) {
 		if (other.gameObject.tag == "acorn" && nutCount < nutCapacity) {
 			other.gameObject.SetActive(false);
 			nutCount++;
@@ -20,9 +27,25 @@ public class CharacterStats : MonoBehaviour {
 		buriedCount++;
 		Debug.Log ("Buried Count: " + buriedCount);
 	}
+
 	public void OnNutUnbury() {
 		buriedCount--;
 		Debug.Log ("Buried Count: " + buriedCount);
+	}
+
+	public void resetNutCount() {
+		nutCount = 0;
+	}
+
+	public void resetHealth() {
+		health = maxHealth;
+	}
+
+	public void reSpawn() {
+		resetNutCount ();
+		resetHealth ();
+		transform.position = spawnPosition;
+		transform.rotation = spawnRotation;
 	}
 
 }
