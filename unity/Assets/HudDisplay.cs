@@ -55,7 +55,6 @@ public class HudDisplay : MonoBehaviour {
 			}
 		}
 
-		
 	}
 
 	void setTimerText(float time) {

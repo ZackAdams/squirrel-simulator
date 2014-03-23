@@ -44,6 +44,7 @@ public class Activate : MonoBehaviour {
 			{
 				player.GetComponent<CharacterStats>().nutCount--;
 				nutCountHole++;
+				player.GetComponent<CharacterStats>().OnNutBury();
 			}
 			
 		}
@@ -55,6 +56,7 @@ public class Activate : MonoBehaviour {
 			{
 				player.GetComponent<CharacterStats>().nutCount++;
 				nutCountHole--;
+				player.GetComponent<CharacterStats>().OnNutUnbury();
 			}
 		}
 	}

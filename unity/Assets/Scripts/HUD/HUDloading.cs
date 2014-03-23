@@ -3,6 +3,7 @@ using System.Collections;
 
 public class HUDloading : MonoBehaviour {
 
+	public CharacterStats player;
 	// Use this for initialization
 	void Start () {
 	
@@ -18,7 +19,7 @@ public class HUDloading : MonoBehaviour {
 		GUILayout.Box ("Winter is Coming......");
 		GUILayout.Box ("Your Mother in law be right,");
 		GUILayout.Box ("turns out rocks aren't edible");
-		GUILayout.Box ("You collected");
+		GUILayout.Box ("You collected " + player.nutCount + " nuts.");
 		if (GUILayout.Button ("Begin Winter")) {
 			Application.LoadLevel ("Winter");
 		}
