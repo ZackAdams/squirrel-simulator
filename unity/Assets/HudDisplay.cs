@@ -17,7 +17,7 @@ public class HudDisplay : MonoBehaviour {
 	public Material winterMaterial;
 	public NutController nutController;
 	public MoundController moundController;
-	private bool isWinter = false;
+	public static bool isWinter = false;
 	private Vector3 spawnPosition;
 	private Quaternion spawnRotation;
 	public SelectableFamilyTree familyTree;
