@@ -20,19 +20,14 @@ public class HudDisplay : MonoBehaviour {
 	private bool isWinter = false;
 	private Vector3 spawnPosition;
 	private Quaternion spawnRotation;
+	public FamilyTree familyTree;
+	public bool showStats = true;
 
 	// Use this for initialization
 	void Start () {
 		alertMessage.text = "";
 		nutSetText (0);
-		if (true) 
-		{
-			hunger.text = "";
-		} 
-		else 
-		{
-			hungerSetText ();
-		}
+		hunger.text = "";
 		currentTimelimit = fallTimelimit;
 		resetTimer ();
 	}
@@ -62,6 +57,10 @@ public class HudDisplay : MonoBehaviour {
 			}
 		}
 
+		if (isWinter) {
+			hungerSetText ();
+		}
+
 	}
 
 	void setTimerText(float time) {
@@ -73,15 +72,22 @@ public class HudDisplay : MonoBehaviour {
 	}
 
 	void hungerSetText () {
-		hunger.text = "Hunger: Very Hungry";
+		hunger.text = "Stockpile " + (3 - player.nutsCollected) + " more nuts!";
+
 	}
 
 	void endGame() {
 		//GAME OVER code goes here
+		//bool an OnGUI function true to display a box with Game Over label, grays the screen out
+		//show score
+		//disable player movement
+		//button to restart
+		//button to quit
 	}
 
 	void switchToWinter() {
 		isWinter = true;
+		familyTree.isWinter = true;
 		currentTimelimit = winterTimelimit;
 		//Turn on snow
 		//terrain.renderer.material = winterMaterial;
@@ -90,6 +96,15 @@ public class HudDisplay : MonoBehaviour {
 		terrain.detailObjectDistance = 0;
 		//Turn off shadows, helps snow look better
 		terrain.castShadows = false;
+	}
+	//this is proper gui usage <michael>
+	void OnGUI () {
+		if (showStats){
+			GUILayout.BeginArea (new Rect(0,0,Screen.width*0.25F, Screen.height*0.5F));
+			GUILayout.Box ("Nuts" + nutsCollected.text + " ");
+			GUILayout.Box ("Time" + displayTimer.text + " ");
+			GUILayout.EndArea ();
+		}
 	}
 
 }

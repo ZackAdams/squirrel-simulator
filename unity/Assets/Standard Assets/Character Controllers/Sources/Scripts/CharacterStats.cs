@@ -8,6 +8,7 @@ public class CharacterStats : MonoBehaviour {
 	public float maxHealth = 100;
 	public float health = 100;
 	private int buriedCount = 0;
+	public int nutsCollected = 0;
 	private Vector3 spawnPosition;
 	private Quaternion spawnRotation;
 
@@ -21,6 +22,10 @@ public class CharacterStats : MonoBehaviour {
 			other.gameObject.SetActive(false);
 			nutCount++;
 		}
+	}
+
+	public void collectedNutToFamily(int newCollect) {
+		nutsCollected = newCollect;
 	}
 
 	public void OnNutBury() {
