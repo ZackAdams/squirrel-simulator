@@ -720,7 +720,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 423461168}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f292502e616e2c419377ee3ca6f226d, type: 3}
+  m_Script: {fileID: 11500000, guid: 59dc3d9b43d915a41a693fc7f0688447, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   terrain: {fileID: 11400000, guid: 078103333b3f850438e89328b3dfa7db, type: 2}
@@ -1593,7 +1593,12 @@ MonoBehaviour:
   hunger: {fileID: 1420968591}
   displayTimer: {fileID: 1500767410}
   player: {fileID: 905133360}
-  collectTimer: 0
+  fallTimelimit: 60
+  winterTimelimit: 60
+  currentTime: 0
+  terrain: {fileID: 0}
+  winterMaterial: {fileID: 0}
+  nutController: {fileID: 0}
 --- !u!1 &1196674387
 GameObject:
   m_ObjectHideFlags: 0

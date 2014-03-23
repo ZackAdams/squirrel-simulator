@@ -28,10 +28,11 @@ public class HudDisplay : MonoBehaviour {
 		{
 			hunger.text = "";
 		} 
-		else 
-		{
-			hungerSetText ();
-		}
+//		Unity claims this to be unreachable
+//		else 
+//		{
+//			hungerSetText ();
+//		}
 		currentTimelimit = fallTimelimit;
 		resetTimer ();
 	}
@@ -76,6 +77,11 @@ public class HudDisplay : MonoBehaviour {
 
 	void endGame() {
 		//GAME OVER code goes here
+		//bool an OnGUI function true to display a box with Game Over label, grays the screen out
+		//show score
+		//disable player movement
+		//button to restart
+		//button to quit
 	}
 
 	void switchToWinter() {
