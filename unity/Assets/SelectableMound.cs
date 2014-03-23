@@ -1,38 +1,37 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Activate : MonoBehaviour {
+public class SelectableMound : Selectable {
 	public GUIText target;
-	public int nutCountHole;
 	public GameObject player;
-	private bool selected = false;
+	public int nutCountHole;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		renderer.material.color = Color.white;
-		selected =false;
-		target.text = "";
+	public void Start() {
 	}
 
-	public void OnLook ()
-	{
+	public void Update() {
+		if (selected) {
+			if (nutCountHole == 1) {
+					target.text = "Press R to grab Nut";
+			} else if (player.GetComponent<CharacterStats> ().nutCount != 0) {
+					target.text = "Press E to drop Nut";
+			} else {
+					target.text = "Go GET NUTS!! GO GO GO GOOOOO!";
+			}
+		}
+	}
+
+	public override void OnSelect() {
+		base.OnSelect ();
+		Debug.Log ("Selected mound object");
 		renderer.material.color = Color.red;
-		if(nutCountHole == 1)
-		{
-			target.text = "Press R to grab Nut";
-		}
-		else if(player.GetComponent<CharacterStats>().nutCount != 0){
-			target.text = "Press E to drop Nut";
-		}
-		else{
-			target.text = "Go GET NUTS!! GO GO GO GOOOOO!";
-		}
-		selected = true;
+	}
+
+	public override void OnDeselect() {
+		base.OnDeselect ();
+		Debug.Log ("Deselected mound object");
+		renderer.material.color = Color.white;
+		target.text = "";
 	}
 
 	public void OnGUI(){
@@ -48,7 +47,7 @@ public class Activate : MonoBehaviour {
 			}
 			
 		}
-
+		
 		//Quick pull the nut out
 		if(currEvent.isKey && currEvent.character == 'r' && selected)
 		{

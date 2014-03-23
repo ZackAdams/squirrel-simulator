@@ -16,6 +16,7 @@ public class HudDisplay : MonoBehaviour {
 	public Terrain terrain;
 	public Material winterMaterial;
 	public NutController nutController;
+	public MoundController moundController;
 	private bool isWinter = false;
 	private Vector3 spawnPosition;
 	private Quaternion spawnRotation;
@@ -54,6 +55,7 @@ public class HudDisplay : MonoBehaviour {
 				endGame();
 			} else {
 				nutController.destroyNuts();
+				moundController.winterizeMounds();
 				resetTimer();
 				player.reSpawn();
 				switchToWinter();
