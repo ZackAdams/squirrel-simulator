@@ -1554,7 +1554,7 @@ GUIText:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 938888558}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Text: 'NUTS: 3'
   m_Anchor: 0
@@ -1774,7 +1774,8 @@ MonoBehaviour:
   terrain: {fileID: 1099404242}
   winterMaterial: {fileID: 2100000, guid: fffdf870b2c00fc43ba4ea921d0c010d, type: 2}
   nutController: {fileID: 423461169}
-  familyTree: {fileID: 0}
+  familyTree: {fileID: 403583802}
+  showStats: 1
 --- !u!1 &1196674387
 GameObject:
   m_ObjectHideFlags: 0
@@ -2253,7 +2254,7 @@ GUIText:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1500767408}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Text: 'TIME LEFT: 00:02'
   m_Anchor: 0
