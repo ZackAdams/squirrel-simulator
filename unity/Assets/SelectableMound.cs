@@ -23,13 +23,13 @@ public class SelectableMound : Selectable {
 
 	public override void OnSelect() {
 		base.OnSelect ();
-		Debug.Log ("Selected mound object");
+		//Debug.Log ("Selected mound object");
 		renderer.material.color = Color.red;
 	}
 
 	public override void OnDeselect() {
 		base.OnDeselect ();
-		Debug.Log ("Deselected mound object");
+		//Debug.Log ("Deselected mound object");
 		renderer.material.color = Color.white;
 		target.text = "";
 	}
