@@ -39,7 +39,6 @@ public class HudDisplay : MonoBehaviour {
 			Application.LoadLevel ("loading");
 		}
 
-		
 	}
 
 	void setTimerText(float time) {
