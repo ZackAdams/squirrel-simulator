@@ -25,15 +25,7 @@ public class HudDisplay : MonoBehaviour {
 	void Start () {
 		alertMessage.text = "";
 		nutSetText (0);
-		if (true) 
-		{
-			hunger.text = "";
-		} 
-//		Unity claims this to be unreachable
-//		else 
-//		{
-//			hungerSetText ();
-//		}
+		hunger.text = "";
 		currentTimelimit = fallTimelimit;
 		resetTimer ();
 	}
@@ -60,6 +52,10 @@ public class HudDisplay : MonoBehaviour {
 				player.reSpawn();
 				switchToWinter();
 			}
+		}
+
+		if (isWinter) {
+			hungerSetText ();
 		}
 
 	}
