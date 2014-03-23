@@ -959,9 +959,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 403583795}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 749f9d6e0be770f41b2a20dcf3110923, type: 3}
+  m_Script: {fileID: 11500000, guid: ec415a049840ba346b0ab8772e0c05dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  selected: 0
   target: {fileID: 1419673255}
   nutCountFamily: 0
   player: {fileID: 905133360}
@@ -1782,7 +1783,7 @@ MonoBehaviour:
   hunger: {fileID: 1420968591}
   displayTimer: {fileID: 1500767410}
   player: {fileID: 905133360}
-  fallTimelimit: 5
+  fallTimelimit: 60
   winterTimelimit: 60
   currentTime: 0
   terrain: {fileID: 1099404242}

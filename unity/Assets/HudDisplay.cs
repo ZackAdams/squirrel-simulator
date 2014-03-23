@@ -20,7 +20,7 @@ public class HudDisplay : MonoBehaviour {
 	private bool isWinter = false;
 	private Vector3 spawnPosition;
 	private Quaternion spawnRotation;
-	public FamilyTree familyTree;
+	public SelectableFamilyTree familyTree;
 	public bool showStats = true;
 
 	// Use this for initialization
