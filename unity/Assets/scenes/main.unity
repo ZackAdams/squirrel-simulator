@@ -74,6 +74,58 @@ NavMeshSettings:
     widthInaccuracy: 16.666666
     heightInaccuracy: 10
   m_NavMesh: {fileID: 0}
+--- !u!1001 &18485468
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400000, guid: f33fceb8da97a84499d20be55090a2ec, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 273.008453
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: f33fceb8da97a84499d20be55090a2ec, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 63.1360626
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: f33fceb8da97a84499d20be55090a2ec, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 139.411148
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: f33fceb8da97a84499d20be55090a2ec, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: f33fceb8da97a84499d20be55090a2ec, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: f33fceb8da97a84499d20be55090a2ec, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: f33fceb8da97a84499d20be55090a2ec, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: f33fceb8da97a84499d20be55090a2ec, type: 2}
+      propertyPath: terrain
+      value: 
+      objectReference: {fileID: 1099404242}
+    - target: {fileID: 11400000, guid: f33fceb8da97a84499d20be55090a2ec, type: 2}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1419673255}
+    - target: {fileID: 11400000, guid: f33fceb8da97a84499d20be55090a2ec, type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 905133353}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: f33fceb8da97a84499d20be55090a2ec, type: 2}
+  m_RootGameObject: {fileID: 357132988}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &19367667
 GameObject:
   m_ObjectHideFlags: 0
@@ -755,6 +807,51 @@ Prefab:
   m_RootGameObject: {fileID: 1099404240}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &357132988
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: f33fceb8da97a84499d20be55090a2ec, type: 2}
+  m_PrefabInternal: {fileID: 18485468}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 357132990}
+  - 114: {fileID: 357132989}
+  m_Layer: 0
+  m_Name: Mounds
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &357132989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: f33fceb8da97a84499d20be55090a2ec,
+    type: 2}
+  m_PrefabInternal: {fileID: 18485468}
+  m_GameObject: {fileID: 357132988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bb063a50e164474585dfbec5a811b13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  terrain: {fileID: 1099404242}
+  numberOfMounds: 100
+  moundPrefab: {fileID: 400000, guid: d30d53027ec6b804c92f65c0c0047eda, type: 2}
+  winterMaterial: {fileID: 2100000, guid: fffdf870b2c00fc43ba4ea921d0c010d, type: 2}
+  target: {fileID: 1419673255}
+  player: {fileID: 905133353}
+--- !u!4 &357132990
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: f33fceb8da97a84499d20be55090a2ec, type: 2}
+  m_PrefabInternal: {fileID: 18485468}
+  m_GameObject: {fileID: 357132988}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 273.008453, y: 63.1360626, z: 139.411148}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
 --- !u!1 &403583795
 GameObject:
   m_ObjectHideFlags: 0
@@ -867,7 +964,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1419673255}
   nutCountFamily: 0
-  player: {fileID: 905133353}
+  player: {fileID: 905133360}
   isWinter: 0
   isCompletedTree: 0
 --- !u!1 &423461168
@@ -1238,90 +1335,6 @@ Prefab:
   m_RootGameObject: {fileID: 598799898}
   m_IsPrefabParent: 0
   m_IsExploded: 1
---- !u!1 &885954387
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 885954391}
-  - 33: {fileID: 885954390}
-  - 135: {fileID: 885954389}
-  - 23: {fileID: 885954388}
-  - 114: {fileID: 885954392}
-  m_Layer: 0
-  m_Name: Mound
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!23 &885954388
-Renderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 885954387}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_Materials:
-  - {fileID: 2100000, guid: d905e8d653d35134fad20acc7fae376f, type: 2}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_SortingLayerID: 0
---- !u!135 &885954389
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 885954387}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: .5
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!33 &885954390
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 885954387}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &885954391
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 885954387}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 389.094391, y: 42.9919968, z: 25.5818672}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
---- !u!114 &885954392
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 885954387}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 119f643daf301484a8ee3c10b92dcf55, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 1419673255}
-  nutCountHole: 0
-  player: {fileID: 905133353}
 --- !u!1 &905133353
 GameObject:
   m_ObjectHideFlags: 0
@@ -1446,6 +1459,7 @@ MonoBehaviour:
   nutCount: 0
   maxHealth: 100
   health: 100
+  nutsCollected: 0
 --- !u!114 &905133361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1768,12 +1782,13 @@ MonoBehaviour:
   hunger: {fileID: 1420968591}
   displayTimer: {fileID: 1500767410}
   player: {fileID: 905133360}
-  fallTimelimit: 60
+  fallTimelimit: 5
   winterTimelimit: 60
   currentTime: 0
   terrain: {fileID: 1099404242}
   winterMaterial: {fileID: 2100000, guid: fffdf870b2c00fc43ba4ea921d0c010d, type: 2}
   nutController: {fileID: 423461169}
+  moundController: {fileID: 357132989}
   familyTree: {fileID: 403583802}
   showStats: 1
 --- !u!1 &1196674387
