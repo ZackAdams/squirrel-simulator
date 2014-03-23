@@ -23,7 +23,7 @@ public class FamilyTree : MonoBehaviour {
 	
 	public void OnLook ()
 	{
-		if(isWinter)
+		if(HudDisplay.isWinter)
 		{
 			renderer.material.color = Color.red;
 			if(player.nutCount != 0){

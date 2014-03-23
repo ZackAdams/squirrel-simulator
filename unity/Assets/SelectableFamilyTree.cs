@@ -42,6 +42,7 @@ public class SelectableFamilyTree : Selectable {
 	public void OnGUI(){
 		Event currEvent = Event.current;
 		//Insert that nut into the hole... heh
+		Debug.Log("On GUI Family Tree " + isCompletedTree);
 		if(currEvent.isKey && currEvent.character == 'e' && selected)
 		{
 			if(player.nutCount <= 3 && player.nutCount != 0)
@@ -50,7 +51,10 @@ public class SelectableFamilyTree : Selectable {
 				nutCountFamily++;
 				player.collectedNutToFamily(nutCountFamily);
 			}
-			
+			if(true)
+			{
+				isCompletedTree = true;
+			}
 		}
 	}
 }

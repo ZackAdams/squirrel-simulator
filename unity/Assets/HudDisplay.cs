@@ -17,7 +17,7 @@ public class HudDisplay : MonoBehaviour {
 	public Material winterMaterial;
 	public NutController nutController;
 	public MoundController moundController;
-	private bool isWinter = false;
+	public static bool isWinter = false;
 	private Vector3 spawnPosition;
 	private Quaternion spawnRotation;
 	public SelectableFamilyTree familyTree;
@@ -45,10 +45,14 @@ public class HudDisplay : MonoBehaviour {
 
 		if (currentTimelimit <= 0.0f)
 		{
-			Debug.Log("Time finished");
-			if (isWinter) {
-				endGame();
-			} else {
+			if (isWinter && familyTree.isCompletedTree) {
+				endGame("You Win! Your Family lived!");
+			}
+			else if(isWinter && !familyTree.isCompletedTree)
+			{
+				endGame("You're entire family died...yeah.");
+			}
+			else {
 				nutController.destroyNuts();
 				moundController.winterizeMounds();
 				resetTimer();
@@ -57,32 +61,24 @@ public class HudDisplay : MonoBehaviour {
 			}
 		}
 
-		if (isWinter) {
-			hungerSetText ();
-		}
-
 	}
 
 	void setTimerText(float time) {
-		displayTimer.text = "Time: " + time.ToString ();
+		displayTimer.text = time.ToString ();
 	}
 
 	void nutSetText(int nuts) {
-		nutsCollected.text = "Nuts: " + nuts.ToString();
+		nutsCollected.text = nuts.ToString ();
 	}
 
-	void hungerSetText () {
-		hunger.text = "Stockpile " + (3 - player.nutsCollected) + " more nuts!";
-
-	}
-
-	void endGame() {
+	void endGame(string _message) {
 		//GAME OVER code goes here
 		//bool an OnGUI function true to display a box with Game Over label, grays the screen out
 		//show score
 		//disable player movement
 		//button to restart
 		//button to quit
+		alertMessage.text = _message;
 	}
 
 	void switchToWinter() {
@@ -101,10 +97,14 @@ public class HudDisplay : MonoBehaviour {
 	void OnGUI () {
 		if (showStats){
 			GUILayout.BeginArea (new Rect(0,0,Screen.width*0.25F, Screen.height*0.5F));
-			GUILayout.Box ("Nuts" + nutsCollected.text + " ");
-			GUILayout.Box ("Time" + displayTimer.text + " ");
+			GUILayout.Box ("Nuts: " + nutsCollected.text + " ");
+			GUILayout.Box ("Time: " + displayTimer.text + " ");
+			if (isWinter) {
+				GUILayout.Box ("Stockpile: " + (3 - player.nutsCollected) + " more nuts!");
+			}
 			GUILayout.EndArea ();
 		}
+
 	}
 
 }

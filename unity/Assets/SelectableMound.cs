@@ -15,7 +15,7 @@ public class SelectableMound : Selectable {
 					target.text = "Press R to grab Nut";
 			} else if (player.GetComponent<CharacterStats> ().nutCount != 0) {
 					target.text = "Press E to drop Nut";
-			} else {
+			} else if(!HudDisplay.isWinter) {
 					target.text = "Go GET NUTS!! GO GO GO GOOOOO!";
 			}
 		}
