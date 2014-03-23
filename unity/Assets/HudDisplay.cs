@@ -10,15 +10,21 @@ public class HudDisplay : MonoBehaviour {
 	public GUIText displayTimer;
 	public CharacterStats player;
 	public float collectTimer;
-	private int currentNuts;
 
 	// Use this for initialization
 	void Start () {
 		alertMessage.text = "";
 		nutSetText (0);
+		if (true) 
+		{
+			hunger.text = "";
+		} 
+		else 
+		{
+			hungerSetText ();
+		}
 		hungerSetText ();
 		collectTimer = 60.0f;
-		currentNuts = 0;
 	}
 	
 	// Update is called once per frame
@@ -32,6 +38,7 @@ public class HudDisplay : MonoBehaviour {
 		{
 			Debug.Log("GAME OVER");
 		}
+
 		
 	}
 
