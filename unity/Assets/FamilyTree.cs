@@ -6,6 +6,8 @@ public class FamilyTree : MonoBehaviour {
 	public int nutCountFamily;
 	public GameObject player;
 	private bool selected = false;
+	public bool isWinter;
+	public bool isCompletedTree;
 	
 	// Use this for initialization
 	void Start () {
@@ -21,14 +23,17 @@ public class FamilyTree : MonoBehaviour {
 	
 	public void OnLook ()
 	{
-		renderer.material.color = Color.red;
-		if(player.GetComponent<CharacterStats>().nutCount != 0){
-			target.text = "Press E to Give Nut";
+		if(isWinter)
+		{
+			renderer.material.color = Color.red;
+			if(player.GetComponent<CharacterStats>().nutCount != 0){
+				target.text = "Press E to Give Nut";
+			}
+			else{
+				target.text = "So hungry, please get us nuts!";
+			}
+			selected = true;
 		}
-		else{
-			target.text = "So hungry, please get us nuts!";
-		}
-		selected = true;
 	}
 	
 	public void OnGUI(){

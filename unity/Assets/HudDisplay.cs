@@ -19,6 +19,7 @@ public class HudDisplay : MonoBehaviour {
 	private bool isWinter = false;
 	private Vector3 spawnPosition;
 	private Quaternion spawnRotation;
+	public FamilyTree familyTree;
 
 	// Use this for initialization
 	void Start () {
@@ -86,6 +87,7 @@ public class HudDisplay : MonoBehaviour {
 
 	void switchToWinter() {
 		isWinter = true;
+		familyTree.isWinter = true;
 		currentTimelimit = winterTimelimit;
 		//Turn on snow
 		//terrain.renderer.material = winterMaterial;

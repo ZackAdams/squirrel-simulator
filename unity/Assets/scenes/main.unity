@@ -868,6 +868,8 @@ MonoBehaviour:
   target: {fileID: 1419673255}
   nutCountFamily: 0
   player: {fileID: 905133353}
+  isWinter: 0
+  isCompletedTree: 0
 --- !u!1 &423461168
 GameObject:
   m_ObjectHideFlags: 0
@@ -1772,6 +1774,7 @@ MonoBehaviour:
   terrain: {fileID: 1099404242}
   winterMaterial: {fileID: 2100000, guid: fffdf870b2c00fc43ba4ea921d0c010d, type: 2}
   nutController: {fileID: 423461169}
+  familyTree: {fileID: 0}
 --- !u!1 &1196674387
 GameObject:
   m_ObjectHideFlags: 0
