@@ -16,12 +16,22 @@ public class Activate : MonoBehaviour {
 	void Update () {
 		renderer.material.color = Color.white;
 		selected =false;
+		target.text = "";
 	}
 
 	public void OnLook ()
 	{
 		renderer.material.color = Color.red;
-		target.text = "Do shit";
+		if(nutCountHole == 1)
+		{
+			target.text = "Press R to grab Nut";
+		}
+		else if(player.GetComponent<CharacterStats>().nutCount != 0){
+			target.text = "Press E to drop Nut";
+		}
+		else{
+			target.text = "Go GET NUTS!! GO GO GO GOOOOO!";
+		}
 		selected = true;
 	}
 
