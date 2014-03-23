@@ -98,7 +98,10 @@ public class HudDisplay : MonoBehaviour {
 		if (showStats){
 			GUILayout.BeginArea (new Rect(0,0,Screen.width*0.25F, Screen.height*0.5F));
 			GUILayout.Box ("Nuts: " + nutsCollected.text + " ");
-			GUILayout.Box ("Time: " + displayTimer.text + " ");
+			if (currentTimelimit >= 0.0f)
+			{
+				GUILayout.Box ("Time: " + displayTimer.text + " ");
+			}
 			if (isWinter) {
 				GUILayout.Box ("Stockpile: " + (3 - player.nutsCollected) + " more nuts!");
 			}

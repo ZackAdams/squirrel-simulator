@@ -51,7 +51,7 @@ public class SelectableFamilyTree : Selectable {
 				nutCountFamily++;
 				player.collectedNutToFamily(nutCountFamily);
 			}
-			if(true)
+			if(nutCountFamily > 2)
 			{
 				isCompletedTree = true;
 			}
