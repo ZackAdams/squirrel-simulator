@@ -26,12 +26,16 @@ public class SelectableFamilyTree : Selectable {
 
 	public override void OnSelect() {
 		base.OnSelect ();
-		renderer.material.color = Color.red;
+		if (isWinter) {
+		 renderer.material.color = Color.red;
+		}
 	}
 
 	public override void OnDeselect() {
 		base.OnDeselect ();
-		renderer.material.color = Color.white;
+		if (isWinter) {
+			renderer.material.color = Color.white;
+		}
 		target.text = "";
 	}
 
