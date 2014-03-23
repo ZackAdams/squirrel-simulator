@@ -11,6 +11,7 @@ public class CharacterStats : MonoBehaviour {
 	public int nutsCollected = 0;
 	private Vector3 spawnPosition;
 	private Quaternion spawnRotation;
+	public AudioClip squelch;
 
 	public void Start() {
 		spawnPosition = transform.position;
@@ -21,6 +22,7 @@ public class CharacterStats : MonoBehaviour {
 		if (other.gameObject.tag == "acorn" && nutCount < nutCapacity) {
 			other.gameObject.SetActive(false);
 			nutCount++;
+			audio.PlayOneShot(squelch, 1F);
 		}
 	}
 
