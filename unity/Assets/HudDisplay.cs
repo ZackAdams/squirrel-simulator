@@ -30,7 +30,8 @@ public class HudDisplay : MonoBehaviour {
 
 		if (collectTimer <= 0.0f)
 		{
-			Debug.Log("GAME OVER");
+			Debug.Log("Time finished");
+			Application.LoadLevel ("loading");
 		}
 		
 	}
