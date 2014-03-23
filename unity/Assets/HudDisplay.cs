@@ -45,14 +45,12 @@ public class HudDisplay : MonoBehaviour {
 
 		if (currentTimelimit <= 0.0f)
 		{
-			Debug.Log ("Family tree completed? " + familyTree.isCompletedTree);
-			Debug.Log("Time finished");
 			if (isWinter && familyTree.isCompletedTree) {
 				endGame("You Win! Your Family lived!");
 			}
 			else if(isWinter && !familyTree.isCompletedTree)
 			{
-				endGame("You're entire family died... yeah... all of them.  Even the squirrel Kid.");
+				endGame("You're entire family died...yeah.");
 			}
 			else {
 				nutController.destroyNuts();
