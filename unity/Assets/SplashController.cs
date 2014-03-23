@@ -23,19 +23,22 @@ public class SplashController : MonoBehaviour {
 
 	private void OnGUI()
 	{
-		GUI.backgroundColor = Color.clear;
-
 		if (hideGui) {
-			GUILayout.BeginArea (new Rect(Screen.width*0.25F, Screen.height*0.4F, Screen.width*0.5F, Screen.height*0.6F));
+			GUI.backgroundColor = Color.clear;
+			splashView.texture = null;
+			GUILayout.BeginArea (new Rect(Screen.width*0.25F, Screen.height*0.2F, Screen.width*0.5F, Screen.height*0.8F));
 			GUILayout.Box ("Find the Nuts!");
-			GUILayout.Box ("You can store 3 at a time.");
-			GUILayout.Box ("Store the Nuts in mounds");
-			GUILayout.Box ("When Winter happens, find your Nuts");
+			GUILayout.Box ("You can carry 3 nuts at a time.");
+			GUILayout.Box ("Store the nuts in mounds on the ground.");
+			GUILayout.Box ("When it becomes winter, retrieve your nuts from the mounds.");
+			GUILayout.Box ("Deposit your nuts at the large tree in the center of the willow forrest.");
+			GUILayout.Box ("Help your family survive winter!");
 			GUILayout.Box ("Are you Ready?");
-			if (GUILayout.Button("Begin the Hunt")){
+			GUI.backgroundColor = Color.blue;
+			if (GUILayout.Button("BEGIN THE HUNT")){
 				Application.LoadLevel ("main");
 			}
-			if (GUILayout.Button ("Suicide")){
+			if (GUILayout.Button ("EXIT GAME")){
 				Application.Quit ();
 			}
 			GUILayout.EndArea ();
