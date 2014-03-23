@@ -20,6 +20,7 @@ public class HudDisplay : MonoBehaviour {
 	private Vector3 spawnPosition;
 	private Quaternion spawnRotation;
 	public FamilyTree familyTree;
+	public bool showStats = true;
 
 	// Use this for initialization
 	void Start () {
@@ -93,6 +94,15 @@ public class HudDisplay : MonoBehaviour {
 		terrain.detailObjectDistance = 0;
 		//Turn off shadows, helps snow look better
 		terrain.castShadows = false;
+	}
+	//this is proper gui usage <michael>
+	void OnGUI () {
+		if (showStats){
+			GUILayout.BeginArea (new Rect(0,0,Screen.width*0.25F, Screen.height*0.5F));
+			GUILayout.Box ("Nuts" + nutsCollected.text + " ");
+			GUILayout.Box ("Time" + displayTimer.text + " ");
+			GUILayout.EndArea ();
+		}
 	}
 
 }
