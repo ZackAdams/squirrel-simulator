@@ -4,7 +4,7 @@ using System.Collections;
 public class FamilyTree : MonoBehaviour {
 	public GUIText target;
 	public int nutCountFamily;
-	public GameObject player;
+	public CharacterStats player;
 	private bool selected = false;
 	public bool isWinter;
 	public bool isCompletedTree;
@@ -26,7 +26,7 @@ public class FamilyTree : MonoBehaviour {
 		if(isWinter)
 		{
 			renderer.material.color = Color.red;
-			if(player.GetComponent<CharacterStats>().nutCount != 0){
+			if(player.nutCount != 0){
 				target.text = "Press E to Give Nut";
 			}
 			else{
@@ -41,10 +41,11 @@ public class FamilyTree : MonoBehaviour {
 		//Insert that nut into the hole... heh
 		if(currEvent.isKey && currEvent.character == 'e' && selected)
 		{
-			if(player.GetComponent<CharacterStats>().nutCount <= 3 && player.GetComponent<CharacterStats>().nutCount != 0)
+			if(player.nutCount <= 3 && player.nutCount != 0)
 			{
-				player.GetComponent<CharacterStats>().nutCount--;
+				player.nutCount--;
 				nutCountFamily++;
+				player.collectedNutToFamily(nutCountFamily);
 			}
 			
 		}

@@ -70,7 +70,7 @@ public class HudDisplay : MonoBehaviour {
 	}
 
 	void hungerSetText () {
-		hunger.text = "You'll go hungry unless you stockpile " + (3 - player.nutsCollected) + " more nuts!";
+		hunger.text = "Stockpile " + (3 - player.nutsCollected) + " more nuts!";
 
 	}
 

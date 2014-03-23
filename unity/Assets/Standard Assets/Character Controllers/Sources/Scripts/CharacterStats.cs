@@ -24,6 +24,10 @@ public class CharacterStats : MonoBehaviour {
 		}
 	}
 
+	public void collectedNutToFamily(int newCollect) {
+		nutsCollected = newCollect;
+	}
+
 	public void OnNutBury() {
 		buriedCount++;
 		Debug.Log ("Buried Count: " + buriedCount);
