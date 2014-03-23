@@ -283,7 +283,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   splashView: {fileID: 1645160631}
-  splashTitle: {fileID: 2800000, guid: d11c3c44761804d6d85146ff4a623c21, type: 3}
+  splashTitle: {fileID: 2800000, guid: 140b912aebd544a78abfe2bb3e676445, type: 3}
   splashStartGame: {fileID: 2800000, guid: d4a49fa9368074539b7ac1865c19fed8, type: 3}
   startGame: {fileID: 2800000, guid: 73346ad27960c4a79a42032e487b5c2f, type: 3}
   quitGame: {fileID: 2800000, guid: b3c39ecb475c54645b6a7da6a798ba20, type: 3}

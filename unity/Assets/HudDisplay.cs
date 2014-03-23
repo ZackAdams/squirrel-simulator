@@ -23,7 +23,6 @@ public class HudDisplay : MonoBehaviour {
 		{
 			hungerSetText ();
 		}
-		hungerSetText ();
 		collectTimer = 60.0f;
 	}
 	
