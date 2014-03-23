@@ -1370,6 +1370,7 @@ MonoBehaviour:
   nutsCollected: {fileID: 938888559}
   hunger: {fileID: 1420968591}
   displayTimer: {fileID: 1500767410}
+  player: {fileID: 905133360}
   collectTimer: 0
 --- !u!1 &1196674387
 GameObject:

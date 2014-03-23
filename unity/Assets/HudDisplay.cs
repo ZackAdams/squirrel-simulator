@@ -3,34 +3,37 @@ using System.Collections;
 
 
 public class HudDisplay : MonoBehaviour {
-
-
+	
 	public GUIText alertMessage;
 	public GUIText nutsCollected;
 	public GUIText hunger;
 	public GUIText displayTimer;
+	public CharacterStats player;
 	public float collectTimer;
+	private int currentNuts;
 
 	// Use this for initialization
 	void Start () {
 		alertMessage.text = "";
-		nutSetText (1);
+		nutSetText (0);
 		hungerSetText ();
 		collectTimer = 60.0f;
+		currentNuts = 0;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+
 		collectTimer -= Time.deltaTime;
 		setTimerText (collectTimer);
-		
+		nutSetText ( player.nutCount );
+
 		if (collectTimer <= 0.0f)
 		{
 			Debug.Log("GAME OVER");
 		}
 		
 	}
-	
 
 	void setTimerText(float time) {
 		displayTimer.text = "Time: " + time.ToString ();
