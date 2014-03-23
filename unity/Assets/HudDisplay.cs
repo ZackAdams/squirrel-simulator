@@ -45,10 +45,16 @@ public class HudDisplay : MonoBehaviour {
 
 		if (currentTimelimit <= 0.0f)
 		{
+			Debug.Log ("Family tree completed? " + familyTree.isCompletedTree);
 			Debug.Log("Time finished");
-			if (isWinter) {
-				endGame();
-			} else {
+			if (isWinter && familyTree.isCompletedTree) {
+				endGame("You Win! Your Family lived!");
+			}
+			else if(isWinter && !familyTree.isCompletedTree)
+			{
+				endGame("You're entire family died... yeah... all of them.  Even the squirrel Kid.");
+			}
+			else {
 				nutController.destroyNuts();
 				moundController.winterizeMounds();
 				resetTimer();
@@ -67,13 +73,14 @@ public class HudDisplay : MonoBehaviour {
 		nutsCollected.text = nuts.ToString ();
 	}
 
-	void endGame() {
+	void endGame(string _message) {
 		//GAME OVER code goes here
 		//bool an OnGUI function true to display a box with Game Over label, grays the screen out
 		//show score
 		//disable player movement
 		//button to restart
 		//button to quit
+		alertMessage.text = _message;
 	}
 
 	void switchToWinter() {
